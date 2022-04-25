@@ -5,6 +5,8 @@ ob_start();
 // les options passées dans l'URL
 // Si dans l'url un paramètre $_GET['url'] existe
 // soit index;php?=la page
+
+
 if(isset($_GET['route'])){
     $url = $_GET['route'];
 }else{
@@ -20,11 +22,11 @@ if($url === "accueil"){
     // on appel le fichier accueil.php
     require_once "pages/accueil.php";
     
-    }elseif($url ==="test"){
-    
-    require_once "pages/test.php";}
+    }else{
+    echo "erreur";
+    }
 
 
-$content = ob_end_clean();
+$content = ob_get_clean();
 require_once "template.php";
 ?>

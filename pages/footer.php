@@ -41,7 +41,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-white" href="http://bluelinedev.fr">BluelineDev.fr</a>
+    <a class="text-white" target="_blank" href="http://bluelinedev.fr">BluelineDev.fr</a>
   </div>
   <!-- Copyright -->
 </footer>
