@@ -1,5 +1,5 @@
 <?php
-require "../methode/gite.php";
+require "methode/gite.php";
 
 $giteLoc = new Gite();
 
