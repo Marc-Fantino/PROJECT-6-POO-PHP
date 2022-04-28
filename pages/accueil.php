@@ -7,13 +7,13 @@ $giteLoc = new Gite();
 $gite = $giteLoc->getGite();
 
 ?>
-<div class="row">
+<div class="row mt-4 ms-5">
 <?php
 foreach($gite as $location)
 {
 ?>
 
-  <div class="col-sm-6">
+  <div class="col-sm-6 my-4">
   <div class="card" style="width: 30rem;">
 <img src="<?=$location['id_photo_location']?>" class="card-img-top" alt="<?=$location['id_nom_location']?>">
 <div class="card-body">

@@ -17,7 +17,7 @@
                       <a class="nav-link" href="#">Nos retours clients</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link disabled">Connexion</a>
+                      <a class="nav-link" href="connexion">Connexion</a>
                     </li>
                   </ul>
                 </div>
