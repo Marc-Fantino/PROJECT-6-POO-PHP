@@ -14,10 +14,43 @@
                       <a class="nav-link" href="#">Reservation</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Nos retours clients</a>
+                          <a class="nav-link" href="#">Nos retours clients</a>
+                        </li>
+                        <li class="nav-item">
+                        <?php
+                        //si l'utilisateur est correctement connecter a sa session en utilisateur
+                        if(isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] ===true){
+                        ?>
+                        <h6 class="text-primary mt-2">Vous êtes connectez en tant que :<?=$_SESSION['id_email_user']?></h6>
+                        <?php
+                        //on verifie que la personne est connecté en tant qu'administrateur 
+                        }
+                        if(isset($_SESSION['connexion']) && $_SESSION['connexion'] ===true){
+                        ?>
+                        <div class="d-flex">
+                          <a class="nav-link" href="administration">administration</a>
+                            <h6 class="text-warning mt-2">Vous êtes connectez en tant qu'admin : <?= $_SESSION['id_email_admin']?>
+                            </h6>
+                        </div>
+                        <?php
+                        }
+                        ?>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="connexion">Connexion</a>
+                    <li>
+                  
+                        <a class="nav-link btn bn-secondery mr-3" href="connexion">inscription</a>
+                        <?php
+                          //si on est connecter en tant que utilisateur ou admin le bouton connexion se transforme en deconnexion et l'inverse
+                          if(isset($_SESSION['connexion']) && $_SESSION['connexion'] === true || isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
+                          ?>
+                            <a class="nav-link btn btn-danger" href="deconnexion">Deconnexion</a>
+                          <?php
+                          }else{
+                          ?>
+                            <a class="nav-link btn btn-warning mr-3" href="Connexion">Connexion</a>
+                          <?php
+                          }
+                        ?>
                     </li>
                   </ul>
                 </div>

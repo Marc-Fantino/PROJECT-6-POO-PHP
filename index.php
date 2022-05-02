@@ -27,25 +27,21 @@ if($url === "accueil"){
     $title = "Accueil page de connexion";
     require_once "pages/formulaire.php";
     }
-    elseif($url ==='administration'){
-    $title ="Espace admin";
-    require_once "pages/administration.php";
-    }
-    else if($url === "administration" && isset($_SESSION['connecter']) && $_SESSION['connecter'] === true){
+ 
+    else if($url === "administration" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
         $title = "Espace admin";
         require_once "pages/administration.php";
         }
-    elseif($url ==='connexionUser'){
-        $title ="Espace membres";
-        require_once "pages/membre.php";
-        }
-    else if($url === "connexionUser" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
+   
+    else if($url === "membre" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
         $title = "Espace membres";
-        require_once "pages/membre.php";
+        require_once "pages/accueil.php";
         }
         elseif($url === "deconnexion"){
             //on appel le fichier de deconnexion
             require_once "pages/deconnexion.php";
+        }elseif($url != '#:[\w]+)#'){
+        
         }
 
 $content = ob_get_clean();
