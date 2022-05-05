@@ -27,16 +27,36 @@ if($url === "accueil"){
     $title = "Accueil page de connexion";
     require_once "pages/formulaire.php";
     }
+  
  
     else if($url === "administration" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
         $title = "Espace admin";
         require_once "pages/administration.php";
         }
-   
+        
+        else if($url ==="administration_Gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
+            $title ="Administration du Gite";
+            require_once "pages/administration_Gite.php";
+        }
+        else if($url ==="creation_gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
+            $title ="creation du Gite";
+            require_once "pages/creation_gite.php";
+        }
+        else if($url === "Confirmation_de_la_création_du_gite" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
+            $title = "Confirmation_de_la_création_du_gite";
+            require_once "pages/confirmation-creation.php";
+            }
     else if($url === "membre" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
         $title = "Espace membres";
         require_once "pages/accueil.php";
         }
+        
+        else if($url === "creation_gite" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
+            $title = "Création de gite";
+            require_once "pages/creation_gite.php";
+            }
+          
+          
         elseif($url === "deconnexion"){
             //on appel le fichier de deconnexion
             require_once "pages/deconnexion.php";
@@ -46,4 +66,3 @@ if($url === "accueil"){
 
 $content = ob_get_clean();
 require_once "template.php";
-?>

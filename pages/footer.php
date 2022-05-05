@@ -1,12 +1,12 @@
 
 
-<div class="container- my-5">
+<div class="container-fluid">
 
   <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section class="mb-1">
       <!-- Facebook -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="bi bi-facebook"></i

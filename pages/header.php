@@ -1,7 +1,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-white bg-dark">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+              <div class="container ms-5 ps-5">
+                <a class="navbar-brand" href="accueil.php">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,7 +38,7 @@
                     </li>
                     <li>
                   
-                        <a class="nav-link btn bn-secondery mr-3" href="connexion">inscription</a>
+                      
                         <?php
                           //si on est connecter en tant que utilisateur ou admin le bouton connexion se transforme en deconnexion et l'inverse
                           if(isset($_SESSION['connexion']) && $_SESSION['connexion'] === true || isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
@@ -47,7 +47,7 @@
                           <?php
                           }else{
                           ?>
-                            <a class="nav-link btn btn-warning mr-3" href="Connexion">Connexion</a>
+                            <a class="nav-link btn btn-warning mr-3" href="connexion">Connexion</a>
                           <?php
                           }
                         ?>
