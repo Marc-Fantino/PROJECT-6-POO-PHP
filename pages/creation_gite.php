@@ -33,7 +33,7 @@ $categoriesLieux = $categorieClasse->getCategories();
         </div>
         <div class="mt-3">
             <label for="id_prix_location"></label>
-            <input type="number" id="id_prix_location" name="id_prix_location" class="form-control" placeholder="Prix de la location" required></input>
+            <input type="number" id="id_prix_location" name="id_prix_location" class="form-control" placeholder="Prix de la location" required/>
         </div>
         
         <div class="mt-3">

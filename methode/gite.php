@@ -100,8 +100,8 @@ class Gite extends Database
             echo "<p class='alert-danger p-2'>Merci de remplir le champ date d'arrivée</p>";
         }
         //Cle etrangère gite categorie
-        if (isset($_POST['id_climat'])) {
-            $this->categorie_id = $_POST['id_climat'];
+        if (isset($_POST['categorie'])) {
+            $this->categorie_id = $_POST['categorie'];
         }
 
         try {
