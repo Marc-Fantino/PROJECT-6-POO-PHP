@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6f6c92f2-a955-41b3-97d4-8ab1d6c27717" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/methode/gite.php" beforeDir="false" afterPath="$PROJECT_DIR$/methode/gite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/confirmation-creation.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/confirmation-creation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/administration.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/administration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/administration_Gite.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/administration_Gite.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/creation_gite.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/creation_gite.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651752960231</updated>
       <workItem from="1651752961572" duration="1716000" />
-      <workItem from="1651754783726" duration="1777000" />
+      <workItem from="1651754783726" duration="2402000" />
     </task>
     <servers />
   </component>

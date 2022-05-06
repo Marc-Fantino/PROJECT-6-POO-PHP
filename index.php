@@ -29,29 +29,38 @@ if($url === "accueil"){
     }
   
  
-    else if($url === "administration" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
+    elseif($url === "administration" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
         $title = "Espace admin";
         require_once "pages/administration.php";
         }
         
-        else if($url ==="administration_Gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
+        elseif($url ==="administration_Gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
             $title ="Administration du Gite";
             require_once "pages/administration_Gite.php";
         }
-        else if($url ==="creation_gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
+        elseif($url ==="creation_gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
             $title ="creation du Gite";
             require_once "pages/creation_gite.php";
         }
-        else if($url === "Confirmation_de_la_création_du_gite" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
-            $title = "Confirmation_de_la_création_du_gite";
-            require_once "pages/confirmation-creation.php";
-            }
-    else if($url === "membre" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
+        elseif($url ==="Mise_à_jour_du_gite" && isset($_GET['id_location']) && $_GET['id_location'] > 0){
+            $title ="Mse_à_jour_du_gite";
+            require_once "pages/update_gite.php";
+        }
+      
+            elseif($url === "Confirmation_de_la_création_du_gite" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
+                $title = "Confirmation_de_la_création_du_gite";
+                require_once "pages/confirmation-creation.php";
+                }
+            elseif($url === "supprimer-gite" && isset($_SESSION['connexion']) && $_SESSION['connexion'] === true){
+                $title = "supprimer du gite";
+                require_once "pages/supprimer-gite.php";
+                }
+    elseif($url === "membre" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
         $title = "Espace membres";
         require_once "pages/accueil.php";
         }
         
-        else if($url === "creation_gite" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
+        elseif($url === "creation_gite" && isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] === true){
             $title = "Création de gite";
             require_once "pages/creation_gite.php";
             }

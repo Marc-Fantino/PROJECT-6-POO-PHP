@@ -1,7 +1,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-white bg-dark">
               <div class="container ms-5 ps-5">
-                <a class="navbar-brand" href="accueil.php">Navbar</a>
+                <a class="navbar-brand" href="accueil">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,7 +21,7 @@
                         //si l'utilisateur est correctement connecter a sa session en utilisateur
                         if(isset($_SESSION['connexion_user']) && $_SESSION['connexion_user'] ===true){
                         ?>
-                        <h6 class="text-primary mt-2">Vous êtes connectez en tant que :<?=$_SESSION['id_email_user']?></h6>
+                        <h6 class="text-primary mt-2">utilisateur :<?=$_SESSION['id_email_user']?></h6>
                         <?php
                         //on verifie que la personne est connecté en tant qu'administrateur 
                         }
@@ -29,7 +29,7 @@
                         ?>
                         <div class="d-flex">
                           <a class="nav-link" href="administration">administration</a>
-                            <h6 class="text-warning mt-2">Vous êtes connectez en tant qu'admin : <?= $_SESSION['id_email_admin']?>
+                            <h6 class="text-warning mt-2">administrateur : <?= $_SESSION['id_email_admin']?>
                             </h6>
                         </div>
                         <?php
